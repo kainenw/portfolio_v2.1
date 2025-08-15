@@ -1,9 +1,9 @@
 import { render, screen, act } from '@testing-library/react'
-import { RouterContext } from 'next/dist/shared/lib/router-context'
+// import { RouterContext } from 'next/dist/shared/lib/router-context'
 import mockRouter from '../../test-utils/mockRouter'
 import { HelmetProvider } from 'react-helmet-async'
 import Header from '../../Components/Header/Header'
-import Resources from './Resources'
+import Resources from '../../Pages/Resources/Resources'
 
 describe('Resources Page', () => {
   it('renders the Resources page with key sections', () => {
@@ -26,9 +26,8 @@ describe('Resources Page', () => {
   it('is not rendered or linked in the navigation', () => {
     render(
       <HelmetProvider>
-        <RouterContext.Provider value={mockRouter}>
+  {/* Mock router context not needed for this test, remove provider */}
           <Header theme="light" changeTheme={jest.fn()} />
-        </RouterContext.Provider>
       </HelmetProvider>
     )
     expect(screen.queryByText(/resources/i)).not.toBeInTheDocument()
