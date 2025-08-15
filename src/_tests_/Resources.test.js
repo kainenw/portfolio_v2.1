@@ -1,5 +1,5 @@
 import { render, screen, act } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
+import Head from 'next/head'
 import Header from '../../Components/Header/Header'
 import Resources from '../../Pages/Resources/Resources'
 
@@ -7,9 +7,10 @@ describe('Resources Page', () => {
   it('renders the Resources page with key sections', () => {
     act(() => {
       render(
-        <HelmetProvider>
+        <>
+          <Head />
           <Resources />
-        </HelmetProvider>
+        </>
       )
     })
     expect(screen.getAllByText(/Resources/i).length).toBeGreaterThan(0)
@@ -23,10 +24,11 @@ describe('Resources Page', () => {
 
   it('is not rendered or linked in the navigation', () => {
     render(
-      <HelmetProvider>
-  {/* Mock router context not needed for this test, remove provider */}
-          <Header theme="light" changeTheme={jest.fn()} />
-      </HelmetProvider>
+      <>
+        <Head />
+        {/* Mock router context not needed for this test, remove provider */}
+        <Header theme="light" changeTheme={jest.fn()} />
+      </>
     )
     expect(screen.queryByText(/resources/i)).not.toBeInTheDocument()
   })

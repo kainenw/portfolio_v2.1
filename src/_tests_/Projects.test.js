@@ -3,7 +3,7 @@ import { act } from 'react'
 import '@testing-library/jest-dom'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import mockRouter from '../test-utils/mockRouter'
-import { HelmetProvider } from 'react-helmet-async';
+import Head from 'next/head';
 import Projects from '../app/Projects/Projects'
 
 // Mock the Deck component
@@ -24,11 +24,12 @@ jest.mock('../../Components/Deck/Deck', () => { // Adjusted mock path
 describe('Projects', () => {
   const renderProjects = () => {
     render(
-      <HelmetProvider>
+      <>
+        <Head />
         <RouterContext.Provider value={mockRouter}>
           <Projects />
         </RouterContext.Provider>
-      </HelmetProvider>
+      </>
     );
   };
 

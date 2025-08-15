@@ -4,17 +4,18 @@ import { act } from 'react'
 import App from '../App/App'
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import mockRouter from '../test-utils/mockRouter';
-import { HelmetProvider } from 'react-helmet-async';
+import Head from 'next/head';
 
 it('renders about link', () => {
   let getAllByText;
   act(() => {
     ({ getAllByText } = render(
-      <HelmetProvider>
+      <>
+        <Head />
         <RouterContext.Provider value={mockRouter}>
           <App />
         </RouterContext.Provider>
-      </HelmetProvider>
+      </>
     ));
   });
   // There may be multiple 'about' (nav and heading)
