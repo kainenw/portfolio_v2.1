@@ -109,6 +109,8 @@ export default function HomePage() {
             variant="primary"
             size="medium"
             aria-label="View my design projects and case studies"
+            onClick={() => {}}
+            aria-describedby={undefined}
           >
             View Projects
           </CTAButton>
@@ -117,6 +119,8 @@ export default function HomePage() {
             variant="secondary"
             size="medium"
             aria-label="Learn about my design process"
+            onClick={() => {}}
+            aria-describedby={undefined}
           >
             My Process
           </CTAButton>
@@ -125,6 +129,8 @@ export default function HomePage() {
             variant="primary"
             size="medium"
             aria-label="Contact me for opportunities"
+            onClick={() => {}}
+            aria-describedby={undefined}
           >
             Get in Touch
           </CTAButton>
@@ -146,6 +152,8 @@ export default function HomePage() {
             variant="secondary"
             size="medium"
             aria-label="View all design projects"
+            onClick={() => {}}
+            aria-describedby={undefined}
           >
             View All Projects
           </CTAButton>
@@ -220,6 +228,8 @@ export default function HomePage() {
             size="large"
             style={{ marginTop: "1rem" }}
             aria-label="Contact Kainen White to start working together"
+            onClick={() => {}}
+            aria-describedby={undefined}
           >
             Get in Touch
           </CTAButton>
