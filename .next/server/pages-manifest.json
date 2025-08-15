@@ -1,10 +1,7 @@
 {
   "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/About.test": "pages/About.test.js",
   "/Blog/Blog": "pages/Blog/Blog.js",
-  "/Blog/Blog.test": "pages/Blog/Blog.test.js",
   "/Resources/Resources": "pages/Resources/Resources.js",
-  "/Resources/Resources.test": "pages/Resources/Resources.test.js",
   "/_document": "pages/_document.js"
 }

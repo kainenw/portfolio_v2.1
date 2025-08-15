@@ -1,6 +1,3 @@
-// FILE: app/page.tsx
-// PURPOSE: The content for the homepage ONLY. All global logic is removed.
-
 import type { Metadata } from "next";
 import Deck from "../Components/Deck/Deck";
 import MetricsDisplay from "../Components/MetricsDisplay/MetricsDisplay";
