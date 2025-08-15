@@ -1,4 +1,11 @@
 import AboutClient from './AboutClient';
+import React, { useState, useEffect, useRef } from 'react';
+import AboutClient from './AboutClient';
+import CTAButton from '../../Components/CTAButton/CTAButton';
+import Image from 'next/image';
+import headshot from '../../img/headshot.png';
+import designthinking from '../../img/designthinking.png';
+import dev from '../../img/dev.png';
 
 export const metadata = {
   title: "About Kainen White",
@@ -6,27 +13,20 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutClient />;
-}
   const [modalOpen, setModalOpen] = useState(false);
   const focusTrapRef = useFocusTrap(modalOpen);
   const previouslyFocusedElement = useRef(null);
 
-  // Store the previously focused element when modal opens
   useEffect(() => {
     if (modalOpen) {
       previouslyFocusedElement.current = document.activeElement;
-      // Prevent body scroll when modal is open
       document.body.style.overflow = 'hidden';
     } else {
-      // Restore focus and body scroll when modal closes
       if (previouslyFocusedElement.current) {
         previouslyFocusedElement.current.focus();
       }
       document.body.style.overflow = 'unset';
     }
-
-    // Cleanup on unmount
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -43,7 +43,6 @@ export default function AboutPage() {
     }
   };
 
-  // Contact form copied from Contact.js
   const contactForm = (
     <form
       action="mailto:kainen.white@gmail.com"
@@ -362,4 +361,4 @@ export default function AboutPage() {
     </>
   )
 }
-export default About
+// ...existing code...

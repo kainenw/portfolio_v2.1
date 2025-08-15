@@ -85,12 +85,24 @@ export default function CaseStudyClient({ slug }) {
   const router = useRouter();
   const slugFromUrl = slug.split('-case-study')[0];
   const project = getProjectBySlug(slugFromUrl);
+  const title = project?.title || '';
+
+  // Focus management for accessibility
+  useEffect(() => {
+    const mainHeading = document.querySelector('h1');
+    if (mainHeading) {
+      mainHeading.focus();
+    }
+    if (project && project.title) {
+      document.title = `${project.title} - Case Study | Kainen White`;
+    }
+  }, [project]);
+
   if (!project) {
     return <div style={{ padding: '2rem' }}>Case study not found.</div>;
   }
 
   const {
-    title, 
     description, 
     longDescription,
     problem, 
@@ -111,18 +123,6 @@ export default function CaseStudyClient({ slug }) {
     links,
     galleryImages 
   } = project;
-
-  // Focus management for accessibility
-  useEffect(() => {
-    // Set focus to the main heading when the case study loads
-    const mainHeading = document.querySelector('h1');
-    if (mainHeading) {
-      mainHeading.focus();
-    }
-    
-    // Update page title for screen readers
-    document.title = `${title} - Case Study | Kainen White`;
-  }, [title]);
   
   // Convert impact array to MetricsDisplay format
   const convertImpactToMetrics = (impacts) => {
