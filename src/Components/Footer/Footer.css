@@ -1,0 +1,145 @@
+/* Footer Component Styles - Per Design Spec Section 6.8 */
+
+.site-footer {
+  background: var(--card-background);
+  border-top: 1px solid var(--secondary-accent);
+  padding: 2rem 0 1.5rem;
+  margin-top: 4rem;
+  color: var(--text-color);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Footer Navigation */
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--text-color, #1a1a1a); /* Light mode: ensure sufficient contrast on light background */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-color, #007acc);
+  text-decoration: underline;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--off-white, #f8f9fa);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 50%;
+  color: var(--secondary-text-color, #666);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background: var(--accent-color, #007acc);
+  color: #fff;
+  border-color: var(--accent-color, #007acc);
+  transform: translateY(-2px);
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color, #666); /* Light mode: readable on white */
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .site-footer {
+  background: var(--card-background, #2a2a2a);
+  border-top-color: var(--border-color, #444);
+}
+
+[data-theme="dark"] .footer-link {
+  color: #fdfeff; /* Dark mode: light links on dark background */
+}
+
+[data-theme="dark"] .footer-link:hover {
+  color: var(--cta-color, #4299E1);
+}
+
+[data-theme="dark"] .social-link {
+  background: var(--dark-gray, #3a3a3a);
+  border-color: var(--border-color, #444);
+  color: var(--off-white, #e0e0e0);
+}
+
+[data-theme="dark"] .social-link:hover {
+  background: var(--accent-color, #4299E1);
+  border-color: var(--accent-color, #4299E1);
+}
+
+[data-theme="dark"] .copyright p {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-nav {
+    gap: 1.5rem;
+  }
+  
+  .footer-link {
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 1.5rem 0 1rem;
+  }
+  
+  .footer-content {
+    gap: 1rem;
+  }
+  
+  .footer-nav {
+    gap: 1rem;
+  }
+  
+  .footer-link {
+    font-size: 0.85rem;
+  }
+}

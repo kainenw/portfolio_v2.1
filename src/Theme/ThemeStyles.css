@@ -1,0 +1,25 @@
+/* Theme Styles CSS */
+/* This file contains theme-specific CSS utilities */
+
+/* System preference detection support */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --page-background: #101010;
+    --card-background: #171717;
+    --text-color: #F7FAFC;
+    --primary-accent: #2B6CB0;
+    --secondary-accent: #4A5568;
+    --cta-color: #4299E1;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --page-background: #DDDDDD;
+    --card-background: #FFFFFF;
+    --text-color: #343A40;
+    --primary-accent: #005A9C;
+    --secondary-accent: #778899;
+    --cta-color: #007BFF;
+  }
+}
