@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import './Card.css';
 import CTAButton from '../CTAButton/CTAButton';
@@ -40,7 +41,7 @@ function Card({ image = '', images = [], title = '', description = '', actions =
   return (
     <article className="project-card" data-testid={dataTestId}>
       <div className="card-image">
-        <img src={displayImage} alt={title ? `${title} project screenshot` : 'Project screenshot'} loading="lazy" />
+  <Image src={displayImage} alt={title ? `${title} project screenshot` : 'Project screenshot'} loading="lazy" width={400} height={300} />
       </div>
       <div className="card-content">
         <h3>{title}</h3>

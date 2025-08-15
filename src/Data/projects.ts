@@ -61,7 +61,7 @@ export interface Project {
   technologies: string[];
   images: string[];
   thumbnail?: string;
-  image?: any;
+  image?: string;
   featured: boolean;
   category: 'design' | 'development';
   learnings?: string[];
@@ -76,7 +76,7 @@ export interface Project {
     repository?: string;
   };
   prototypeEmbed?: string;
-  processDocs?: any;
+  processDocs?: string;
   challenges?: Challenge[];
 }
 

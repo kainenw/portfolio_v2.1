@@ -1,4 +1,8 @@
-import "../_Pages.css";
+import mdnImg from "../../img/mdn.webp";
+import nodejsImg from "../../img/nodejs.webp";
+import figmaImg from "../../img/figma.webp";
+import gitImg from "../../img/git.webp";
+import devImg from "../../img/dev.webp";
 
 function Resources() {
   return (
@@ -12,7 +16,7 @@ function Resources() {
       </div>
 
       <div className="info-group contrast-section">
-        <img className="icon" src={require("../../img/mdn.webp")} alt="mdn logo" loading="lazy" />
+  <img className="icon" src={mdnImg} alt="mdn logo" loading="lazy" />
         <div>
           <h3>Master the Fundamentals:</h3>
           <p>Bookmark the best documentation for:</p>
@@ -44,7 +48,7 @@ function Resources() {
       <div className="info-group non-contrast-section">
         <img
           className="icon"
-          src={require("../../img/nodejs.webp")}
+          src={nodejsImg}
           alt="nodejs logo"
           loading="lazy"
         />
@@ -76,7 +80,7 @@ function Resources() {
         </div>
       </div>
       <div className="info-group contrast-section">
-        <img className="icon" src={require("../../img/figma.webp")} alt="figma logo" loading="lazy" />
+  <img className="icon" src={figmaImg} alt="figma logo" loading="lazy" />
         <div>
           <h3>Design Powerhouses:</h3>
           <ul>
@@ -93,7 +97,7 @@ function Resources() {
         </div>
       </div>
       <div className="info-group non-contrast-section">
-        <img className="icon" src={require("../../img/git.webp")} alt="Git logo" loading="lazy" />
+  <img className="icon" src={gitImg} alt="Git logo" loading="lazy" />
         <div>
           <h3>Collaboration and Version Control</h3>
           <ul>
@@ -107,7 +111,7 @@ function Resources() {
         </div>
       </div>
       <div className="info-group contrast-section">
-        <img className="icon" src={require("../../img/mdn.webp")} alt="MDN logo" loading="lazy" />
+  <img className="icon" src={mdnImg} alt="MDN logo" loading="lazy" />
         <div>
           <h3>Free Learning Paths</h3>
           <p>
@@ -134,7 +138,7 @@ function Resources() {
       <div className="info-group non-contrast-section">
         <img
           className="icon"
-          src={require("../../img/dev.webp")}
+          src={devImg}
           alt="Smashing Magazine logo"
           loading="lazy"
         />

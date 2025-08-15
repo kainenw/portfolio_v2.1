@@ -1,5 +1,4 @@
 "use client";
-import NotFoundClient from './NotFoundClient';
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { Home, AlertCircle } from 'lucide-react';

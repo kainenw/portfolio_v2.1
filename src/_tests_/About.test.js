@@ -93,8 +93,7 @@ describe('About', () => {
       const startProjectButtons = screen.getAllByRole('button', { name: /start a project/i });
       fireEvent.click(startProjectButtons[0]);
     });
-    // Only select the close button inside the dialog
-    const dialog = screen.getByRole('dialog')
+  // Only select the close button inside the dialog
     const closeBtn = screen.getByRole('button', { name: /^close$/i, hidden: true })
     act(() => {
       fireEvent.click(closeBtn)
