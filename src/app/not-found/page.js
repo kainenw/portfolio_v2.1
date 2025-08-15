@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { Home, AlertCircle } from 'lucide-react';
 import Head from 'next/head';
-import '../_Pages.css';
 
 function NotFound() {
   // Announce to screen readers that this is an error page
