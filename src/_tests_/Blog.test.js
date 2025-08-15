@@ -1,15 +1,16 @@
 import { render, screen } from '@testing-library/react'
 import { act } from 'react'
 import Blog from './Blog'
-import { HelmetProvider } from 'react-helmet-async';
+import Head from 'next/head';
 
 describe('Blog', () => {
   it('renders the Blog page with key sections', () => {
     act(() => {
       render(
-        <HelmetProvider>
+        <>
+          <Head />
           <Blog />
-        </HelmetProvider>
+        </>
       )
     })
     // Use getAllByText for 'blog' since it appears multiple times

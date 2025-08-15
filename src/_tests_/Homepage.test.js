@@ -1,17 +1,18 @@
 import { render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import mockRouter from '../test-utils/mockRouter'
-import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
+import Head from 'next/head';
 import Homepage from '../app/Home/Homepage'
 
 describe('Homepage', () => {
   it('renders hero section with headline and actions', () => {
     render(
-      <HelmetProvider>
+      <>
+        <Head />
         <RouterContext.Provider value={mockRouter}>
           <Homepage />
         </RouterContext.Provider>
-      </HelmetProvider>
+      </>
     )
     expect(screen.getByRole('heading', { level: 1, name: /user-centric/i })).toBeInTheDocument()
     expect(screen.getByText(/passionate designer/i)).toBeInTheDocument()
@@ -28,11 +29,12 @@ describe('Homepage', () => {
 
   it('renders featured projects section and at least one project card', () => {
     render(
-      <HelmetProvider>
+      <>
+        <Head />
         <RouterContext.Provider value={mockRouter}>
           <Homepage />
         </RouterContext.Provider>
-      </HelmetProvider>
+      </>
     )
     expect(screen.getByRole('heading', { level: 2, name: /featured projects/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /view all projects/i })).toHaveAttribute('href', '/projects')
@@ -43,11 +45,12 @@ describe('Homepage', () => {
 
   it('renders homepage CTA section with correct text and button', () => {
     render(
-      <HelmetProvider>
+      <>
+        <Head />
         <RouterContext.Provider value={mockRouter}>
           <Homepage />
         </RouterContext.Provider>
-      </HelmetProvider>
+      </>
     )
     expect(screen.getByRole('heading', { level: 2, name: /ready to build/i })).toBeInTheDocument()
     expect(screen.getByText(/i'd love to hear from you/i)).toBeInTheDocument()
