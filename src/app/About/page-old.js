@@ -1,6 +1,4 @@
-import AboutClient from './AboutClient';
 import React, { useState, useEffect, useRef } from 'react';
-import AboutClient from './AboutClient';
 import CTAButton from '../../Components/CTAButton/CTAButton';
 import Image from 'next/image';
 import headshot from '../../img/headshot.png';
