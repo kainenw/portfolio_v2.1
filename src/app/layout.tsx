@@ -8,15 +8,6 @@ import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import ClientProvider from "../Components/ClientProvider";
 
-// Client-safe helper that returns the system theme when run in a browser.
-// This function is safe to import/use anywhere because it guards access to window.
-export function getSystemTheme(): 'dark' | 'light' {
-  if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-  return 'light';
-}
-
 export const metadata: Metadata = {
   title: "Kainen White | Product & UX Designer",
   description:
