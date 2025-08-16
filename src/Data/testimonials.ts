@@ -1,3 +1,5 @@
+import { shuffle } from '../lib/shuffle'
+
 export interface Testimonial {
   id: string
   name: string
@@ -78,6 +80,5 @@ export const getTestimonialsByProject = (projectSlug: string): Testimonial[] => 
 
 // Helper function to get random testimonials
 export const getRandomTestimonials = (count: number): Testimonial[] => {
-  const shuffled = [...testimonials].sort(() => 0.5 - Math.random())
-  return shuffled.slice(0, count)
+  return shuffle(testimonials).slice(0, count)
 }
