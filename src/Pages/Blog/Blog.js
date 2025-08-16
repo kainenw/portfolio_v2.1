@@ -7,12 +7,8 @@ function Blog() {
       <p>Much of my blog content can be found elsewhere on this site. The posts here go into more detail</p>
       <h2>highlighted posts</h2>
       <div>
-        <h3>
-          <p>
-            Highlight your commitment to growth and improvement by sharing insights from online courses, workshops, or
-            personal projects that have contributed to your skill set.
-          </p>
-        </h3>
+        <h3>Highlight your commitment to growth and improvement</h3>
+        <p>Share insights from online courses, workshops, or personal projects…</p>
       </div>
       <div>
         <h2>Let&apos;s support Mozilla</h2>
