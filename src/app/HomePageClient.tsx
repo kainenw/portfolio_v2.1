@@ -70,7 +70,6 @@ export default function HomePageClient() {
             variant="primary"
             size="medium"
             aria-label="View my design projects and case studies"
-            onClick={() => {}}
             aria-describedby={undefined}
           >
             View Projects
@@ -80,7 +79,6 @@ export default function HomePageClient() {
             variant="secondary"
             size="medium"
             aria-label="Learn about my design process"
-            onClick={() => {}}
             aria-describedby={undefined}
           >
             My Process
@@ -90,7 +88,6 @@ export default function HomePageClient() {
             variant="primary"
             size="medium"
             aria-label="Contact me for opportunities"
-            onClick={() => {}}
             aria-describedby={undefined}
           >
             Get in Touch
@@ -113,7 +110,6 @@ export default function HomePageClient() {
             variant="secondary"
             size="medium"
             aria-label="View all design projects"
-            onClick={() => {}}
             aria-describedby={undefined}
           >
             View All Projects
@@ -189,7 +185,6 @@ export default function HomePageClient() {
             size="large"
             style={{ marginTop: "1rem" }}
             aria-label="Contact Kainen White to start working together"
-            onClick={() => {}}
             aria-describedby={undefined}
           >
             Get in Touch
