@@ -27,9 +27,9 @@ function Contact() {
     return newErrors;
   };
 
-  const EMAILJS_SERVICE_ID = 'service_aq31ryq';
-  const EMAILJS_TEMPLATE_ID = 'template_i6hf19e';
-  const EMAILJS_PUBLIC_KEY = 'TVAPL6E8ACT_xqRDP';
+  const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
