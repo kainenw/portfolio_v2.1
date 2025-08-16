@@ -11,7 +11,7 @@ function Blog() {
         <p>Share insights from online courses, workshops, or personal projects…</p>
       </div>
       <div>
-        <h2>Let&apos;s support Mozilla</h2>
+        <h3>Let&apos;s support Mozilla</h3>
         <p>I love Mozilla and you should too.</p>
         <p>
           It&apos;s a low bar, but Mozilla is the best of the four major client-side internet companies: Apple, Google,
