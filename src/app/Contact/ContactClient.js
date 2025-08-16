@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Mail, CheckCircle, AlertCircle, Phone, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import CTAButton from '../../Components/CTAButton/CTAButton';
+import logger from '../../lib/logger';
 
 function Contact() {
   const [formStatus, setFormStatus] = useState(''); // '', 'success', 'error', 'submitting'
@@ -42,7 +43,7 @@ function Contact() {
     
     // Check if EmailJS is properly configured
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-      console.error('EmailJS is not properly configured. Missing credentials.');
+      logger.error('EmailJS is not properly configured. Missing credentials.');
       setFormStatus('error');
       return;
     }
@@ -61,7 +62,7 @@ function Contact() {
         },
         EMAILJS_PUBLIC_KEY
       );
-      console.log('EmailJS Success:', result);
+      logger.log('EmailJS Success:', result);
       setFormStatus('success');
       setFormData({ name: '', email: '', message: '' });
       // Google Analytics conversion tracking for successful submission
@@ -74,7 +75,7 @@ function Contact() {
         });
       }
     } catch (err) {
-      console.error('EmailJS Error:', err);
+      logger.error('EmailJS Error:', err);
       setFormStatus('error');
       // Google Analytics event for failed submission
       if (window.gtag) {
