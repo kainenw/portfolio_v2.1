@@ -5,6 +5,24 @@ import Link from 'next/link';
 import './CTAButton.css';
 import { Download } from 'lucide-react';
 
+/**
+ * @typedef {React.ButtonHTMLAttributes<HTMLButtonElement> & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+ *   children: React.ReactNode;
+ *   variant?: 'primary' | 'secondary';
+ *   size?: 'small' | 'medium' | 'large';
+ *   href?: string;
+ *   onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+ *   download?: boolean;
+ *   showDownloadIcon?: boolean;
+ * }} CTAButtonProps
+ */
+
+/**
+ * Call to action button that can render as a button or link.
+ *
+ * @param {CTAButtonProps} props
+ * @returns {JSX.Element}
+ */
 function CTAButton({
   children,
   variant = 'primary', // 'primary' or 'secondary'
