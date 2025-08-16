@@ -20,6 +20,18 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+Create a `.env.local` file in the project root to provide the credentials used by the contact form. Define the following variables:
+
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=<your-emailjs-service-id>
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=<your-emailjs-template-id>
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=<your-emailjs-public-key>
+```
+
+The `.env.local` file is ignored by Git. Each contributor should maintain their own copy locally.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
