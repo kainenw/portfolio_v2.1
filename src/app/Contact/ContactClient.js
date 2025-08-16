@@ -104,7 +104,7 @@ function Contact() {
         {formStatus === 'error' && (
           <div className="form-notification error" role="alert" aria-live="assertive">
             <AlertCircle size={20} aria-hidden="true" />
-            <span>Sorry, there was an error sending your message. Please try again, or email me directly at <a href="mailto:hello@example.com" style={{color:'#005A9C',textDecoration:'underline'}}>hello@example.com</a>.</span>
+            <span>Sorry, there was an error sending your message. Please try again, or email me directly at <a href="mailto:kainen.white@gmail.com" style={{color:'#005A9C',textDecoration:'underline'}}>kainen.white@gmail.com</a>.</span>
           </div>
         )}
         <form
@@ -211,7 +211,7 @@ function Contact() {
           <div role="listitem" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginLeft: 0  }}>
             <Mail size={22} style={{ verticalAlign: 'middle', minWidth: 22}} aria-hidden="true" />
             <span>Email</span>
-            <a href="mailto:hello@example.com" style={{ marginLeft: 'auto', color: '#f9fdff', fontWeight: 500 }} aria-label="Send email to hello@example.com">hello@example.com</a>
+            <a href="mailto:kainen.white@gmail.com" style={{ marginLeft: 'auto', color: '#f9fdff', fontWeight: 500 }} aria-label="Send email to kainen.white@gmail.com">kainen.white@gmail.com</a>
           </div>
           <div role="listitem" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginLeft: 0  }}>
             <Phone size={22} style={{ verticalAlign: 'middle', minWidth: 22 }} aria-hidden="true" />
