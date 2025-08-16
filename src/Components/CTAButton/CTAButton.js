@@ -9,8 +9,8 @@ function CTAButton({
   children,
   variant = 'primary', // 'primary' or 'secondary'
   size = 'medium', // 'small', 'medium', 'large'
-  onClick,
-  href,
+  onClick = undefined,
+  href = undefined,
   disabled = false,
   className = '',
   download = false,
