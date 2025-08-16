@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import MetricsDisplay from '../../../Components/MetricsDisplay/MetricsDisplay';
 import { getProjectBySlug } from '../../../Data/projects';
-import DOMPurify from '../../../lib/dompurify';
+import DOMPurify from 'dompurify';
 import './CaseStudy.css';
 
 // Helper function to render list items with proper accessibility
