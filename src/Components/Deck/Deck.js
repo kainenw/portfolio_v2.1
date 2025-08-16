@@ -29,7 +29,7 @@ function Deck({ items, actionType }) {
 
   return (
     <div className="deck-grid">
-      {items.map((item, idx) => {
+      {items.map((item) => {
         let actions = [];
         if (item.links) {
           actionTypes.forEach(type => {
@@ -57,7 +57,7 @@ function Deck({ items, actionType }) {
         }
         return (
           <Card
-            key={idx}
+            key={item.slug}
             {...item}
             actions={actions}
             dataTestId={dataTestId}
