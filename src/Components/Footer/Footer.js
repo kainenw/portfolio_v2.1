@@ -18,42 +18,50 @@ function Footer() {
         </nav>
 
         {/* Social Media Links */}
-        <div className="social-links" role="list" aria-label="Social media links">
-          <a 
-            href="https://github.com/kainenwhite" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="Visit Kainen White's GitHub profile (opens in new tab)"
-          >
-            <Github size={20} aria-hidden="true" />
-          </a>
-          <a 
-            href="https://linkedin.com/in/kainenwhite" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="Visit Kainen White's LinkedIn profile (opens in new tab)"
-          >
-            <Linkedin size={20} aria-hidden="true" />
-          </a>
-          <a 
-            href="https://twitter.com/kainenwhite" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="Visit Kainen White's Twitter profile (opens in new tab)"
-          >
-            <Twitter size={20} aria-hidden="true" />
-          </a>
-          <a 
-            href="mailto:kainen.white@gmail.com"
-            className="social-link"
-            aria-label="Send email to Kainen White"
-          >
-            <Mail size={20} aria-hidden="true" />
-          </a>
-        </div>
+        <ul className="social-links" aria-label="Social media links">
+          <li>
+            <a
+              href="https://github.com/kainenwhite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Visit Kainen White's GitHub profile (opens in new tab)"
+            >
+              <Github size={20} aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/kainenwhite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Visit Kainen White's LinkedIn profile (opens in new tab)"
+            >
+              <Linkedin size={20} aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/kainenwhite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Visit Kainen White's Twitter profile (opens in new tab)"
+            >
+              <Twitter size={20} aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:kainen.white@gmail.com"
+              className="social-link"
+              aria-label="Send email to Kainen White"
+            >
+              <Mail size={20} aria-hidden="true" />
+            </a>
+          </li>
+        </ul>
 
         {/* Copyright Notice */}
         <div className="copyright">
