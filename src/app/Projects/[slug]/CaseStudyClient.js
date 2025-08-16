@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import MetricsDisplay from '../../../Components/MetricsDisplay/MetricsDisplay';
 import { getProjectBySlug } from '../../../Data/projects';
+import DOMPurify from '../../../lib/dompurify';
 import './CaseStudy.css';
 
 // Helper function to render list items with proper accessibility
@@ -249,8 +250,8 @@ export default function CaseStudyClient({ slug }) {
           <h2 id="prototype-heading">Interactive Prototype</h2>
           <div className="case-study-prototype-embed" style={{margin: '1.5rem 0'}}>
             {typeof prototypeEmbed === 'string' ? (
-              <div 
-                dangerouslySetInnerHTML={{ __html: prototypeEmbed }} 
+              <div
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(prototypeEmbed) }}
                 role="region"
                 aria-label="Interactive prototype embed"
               />
