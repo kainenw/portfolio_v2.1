@@ -2,5 +2,8 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
