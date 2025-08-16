@@ -1,3 +1,5 @@
+import { shuffle } from '../lib/shuffle'
+
 export interface Client {
   id: string
   name: string
@@ -115,6 +117,5 @@ export const getClientByTestimonialId = (testimonialId: string): Client | undefi
 
 // Helper function to get random clients
 export const getRandomClients = (count: number): Client[] => {
-  const shuffled = [...clients].sort(() => 0.5 - Math.random())
-  return shuffled.slice(0, count)
+  return shuffle(clients).slice(0, count)
 }
