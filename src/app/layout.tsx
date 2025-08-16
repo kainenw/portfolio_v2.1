@@ -2,10 +2,8 @@ import "./globals.css";
 import "./_old-styles_/_Pages.css";
 import "./_old-styles_/Homepage.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-// Initialize fonts so `.variable` is available on the returned objects
-const geist = Geist({ subsets: ["latin"], variable: "--geist-font" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--geist-mono" });
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], variable: "--inter-font" });
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import ClientProvider from "../Components/ClientProvider";
@@ -33,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Removed inline setThemeScript; next-themes now fully controls theme */}
       </head>
-      <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <ClientProvider>
           <div>
             <a href="#main-content" className="skip-link">
