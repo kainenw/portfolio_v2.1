@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import CTAButton from './CTAButton/CTAButton';
 
