@@ -3,6 +3,7 @@
   publish = ".next"
 
 [build.environment]
+  NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
   NEXT_PUBLIC_EMAILJS_SERVICE_ID = "service_aq31ryq"
   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID = "template_i6hf19e"
@@ -10,12 +11,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[build]
-  command = "npm run build"
-  publish = ".next"
-
-[context.production]
-  environment = { NODE_VERSION = "20" }
-
-
