@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Open Sans font (Design Spec Section 8.4) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Design System Base Styles (Design Spec Section 8) */
+:root {
+  /* Light Mode Colors (Design Spec Section 8.3a) */
+  --color-background: #DDDDDD;
+  --color-card: #FFFFFF;
+  --color-card-rgb: 255, 255, 255;
+  --color-text: #343A40;
+  --color-primary: #005A9C;
+  --color-secondary: #778899;
+  --color-cta: #007BFF;
+}
+
+.dark {
+  /* Dark Mode Colors (Design Spec Section 8.3b) */
+  --color-background: #101010;
+  --color-card: #171717;
+  --color-card-rgb: 23, 23, 23;
+  --color-text: #F7FAFC;
+  --color-primary: #2B6CB0;
+  --color-secondary: #4A5568;
+  --color-cta: #4299E1;
+}
+
+/* Base body styling with design spec backgrounds */
+body {
+  background-color: #DDDDDD; /* Light mode page background */
+  color: #343A40; /* Light mode text color */
+  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark body {
+  background-color: #101010; /* Dark mode page background */
+  color: #F7FAFC; /* Dark mode text color */
+}
+
+/* Custom scrollbar - Design spec compliant */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6; /* Gray-100 equivalent */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: #1f2937; /* Gray-800 equivalent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* Gray-300 equivalent */
+  border-radius: 0.5rem;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Gray-600 equivalent */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af; /* Gray-400 equivalent */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280; /* Gray-500 equivalent */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Button focus improvements */
+button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Link focus improvements */
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #2563eb, #9333ea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .gradient-border {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    padding: 1px;
+    border-radius: 0.5rem;
+  }
+  
+  .gradient-border > * {
+    background-color: white;
+    border-radius: 0.5rem;
+  }
+  
+  .dark .gradient-border > * {
+    background-color: #111827; /* Gray-900 equivalent */
+  }
+}
+
+/* Animation utilities */
+@layer components {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    /* Ensure content is visible by default in case animation fails */
+    opacity: 1;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounceUpDown 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0.3; /* Start with some opacity instead of 0 for better fallback */
+    transform: translateY(20px); /* Reduce distance for smoother animation */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Hero actions centering */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CTA Button styles */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.cta-primary {
+  background-color: var(--color-cta);
+  color: white;
+  border-color: var(--color-cta);
+}
+
+.cta-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-secondary);
+}
+
+.cta-secondary:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.cta-medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
