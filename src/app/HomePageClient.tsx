@@ -125,7 +125,6 @@ export default function HomePageClient() {
         <h2 style={{ marginBottom: "1rem" }}>Results That Matter</h2>
         <p
           style={{
-            marginBottom: "3rem",
             maxWidth: "600px",
             margin: "0 auto 3rem",
             color: "#fff",
